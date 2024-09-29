@@ -80,3 +80,7 @@ h3 {
 p {
     @apply leading-5 [&:not(:first-child)]:mt-2
 }
+
+.card-hover {
+  @apply hover:border-red-600
+}

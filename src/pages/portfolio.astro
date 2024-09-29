@@ -1,0 +1,50 @@
+---
+import '@/styles/globals.css'
+import Layout from "@/layouts/Layout.astro"
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle
+} from '@/components/ui/card'
+import { Image } from "astro:assets"
+import tarcImage from "../../public/portfolio/tarc-fitness-website.png"
+---
+
+<Layout title="Fangxing Liu's Portfolio">
+    <main>
+        <div class="m-8">
+            <div class="flex justify-start">
+                <h1>My Porfolio</h1>
+            </div>
+            <div class="flex justify-center items-center pt-8">
+                <Card className='max-w-4xl w-full'>
+                    <div class="flex w-full">
+                        <div class="w-1/2">
+                            <CardHeader>
+                                <CardTitle>
+                                    Tarc Website
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laboriosam id illum quisquam ea, facere explicabo. Fuga earum fugit tempora, dolorem, laudantium ullam eos libero hic animi culpa illo voluptates!</p>
+                                <p>Visit it here.</p>
+                                
+
+                            </CardContent>
+                        </div>
+                        <div class="w-1/2 flex items-center justify-center">
+                            <Image
+                                src={tarcImage}
+                                width={ tarcImage.width/2 }
+                                densities={[1.5, 2]}
+                                alt="Website of tarc"
+                            />
+                        </div>
+                    </div>
+                </Card>
+            </div>
+
+        </div>
+    </main>
+</Layout>
